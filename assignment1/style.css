@@ -1,0 +1,384 @@
+:root {
+  --web-color: rgb(32 83 100);
+  --web-color-light: rgb(81, 140, 159);
+  --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+* {
+  /* padding: 0; */
+  margin: 0;
+  box-sizing: border-box;
+  /* border: 1px solid navy; */
+  font-family: "Roboto", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+#nav-toggle-btn,
+#toggle-btn {
+  display: none;
+}
+nav {
+  top: 20px;
+  position: fixed;
+  border-color: aqua;
+  z-index: 100;
+  color: white;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+nav li a {
+  transition: 0.21s;
+}
+
+nav li a:hover {
+  transform: scale(1.1);
+}
+button {
+  background: var(--web-color);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  transition-duration: 0.4s;
+  border: none;
+}
+
+button:hover {
+  background-color: rgb(16, 147, 191);
+  transform: scale(1.02);
+}
+
+.changeBackground,
+.changeBackground * {
+  top: 0;
+  background-color: var(--web-color);
+  color: white !important;
+}
+
+nav > h2 {
+  text-align: center;
+  width: 30%;
+  font-size: 2.5rem;
+}
+
+nav > ul {
+  display: flex;
+  justify-content: space-around;
+  width: 70%;
+}
+
+nav > ul > li > a {
+  color: white;
+}
+
+div.hero {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+div.hero > video {
+  position: absolute;
+  z-index: -1;
+}
+
+div.text {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  width: 70%;
+}
+
+.heading {
+  font-size: 8vw;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.heading2 {
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+.text > p {
+  font-size: x-large;
+}
+
+/*-------------- STATS--------- */
+.stats {
+  height: 75vh;
+  background-color: var(--web-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.stats h1 {
+  margin: 2rem 0;
+}
+table {
+  width: 750px;
+  max-width: 95%;
+  border-collapse: collapse;
+  overflow: scroll;
+  border: 1px solid white;
+  margin-bottom: 2rem;
+}
+
+tr:nth-of-type(odd) {
+  background: var(--web-color-light);
+}
+
+th {
+  background-color: var(--web-color);
+  font-weight: 900;
+}
+
+td,
+th {
+  padding: 10px;
+  text-align: left;
+  font-size: 18px;
+}
+
+/*-------------- Staff--------- */
+.staff {
+  margin-bottom: 4rem;
+}
+.staff h1 {
+  text-align: center;
+  margin: 4rem;
+  color: var(--web-color);
+}
+.staff .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem;
+}
+
+.card {
+  box-shadow: var(--shadow);
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 400px;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 2rem;
+}
+
+.card .icon {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow);
+  border-radius: 50%;
+  padding: 20px;
+}
+.card .designation {
+  margin: 20px;
+  color: var(--web-color);
+}
+
+.card .info {
+  padding: 10px;
+  font-style: italic;
+}
+.contact-section {
+  background-color: var(--web-color);
+  color: white;
+  text-align: center;
+  padding: 4rem 0;
+}
+.contact {
+  display: flex;
+  text-align: left;
+}
+
+.contact > .left {
+  width: 60%;
+  background-color: var(--web-color);
+  height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.left ul {
+  padding: 0;
+}
+.left li {
+  align-items: flex-start;
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+.left h1 {
+  margin: 20px 0;
+  font-size: 2.5rem;
+}
+.left a {
+  margin-left: 10px;
+  font-style: italic;
+  color: white;
+  text-decoration: underline;
+  transition: 0.2s;
+}
+
+.left a:hover {
+  transform: scale(1.1);
+}
+
+.contact .right form {
+  display: flex;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: white;
+  flex-direction: column;
+  width: 350px;
+  max-width: 95vw;
+  bottom: -4.6rem;
+  position: relative;
+}
+
+.contact .right form div {
+  margin-bottom: 10px;
+}
+.contact .right form div label {
+  display: inline-block;
+  margin-bottom: 6px;
+  color: var(--web-color);
+  font-size: small;
+}
+.contact .right form div input {
+  display: block;
+  width: 100%;
+  height: 40px;
+}
+.contact .right form div textarea {
+  display: block;
+  width: 100%;
+}
+
+.last-row {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.last-row a {
+  color: var(--web-color);
+}
+
+/*--------- campus tour---------- */
+
+.campus-tour {
+  color: var(--web-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 700px;
+  overflow: hidden;
+  position: relative;
+}
+.campus-tour > iframe {
+  max-width: 95%;
+  border-radius: 20px;
+  box-shadow: --shadow;
+}
+.campus-tour hr {
+  width: 100vw;
+  color: var(--web-color);
+  border: 28px solid;
+  position: absolute;
+  z-index: -1;
+}
+
+@media screen and (max-width: 768px) {
+  #nav-toggle-btn,
+  #toggle-btn {
+    display: unset;
+    position: absolute;
+    z-index: 100;
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    right: 10px;
+    top: 10px;
+  }
+
+  .contact {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact > .left {
+    width: 90%;
+  }
+
+  .heading2 {
+    font-size: 2.5rem;
+  }
+
+  .staff .container {
+    flex-direction: column;
+  }
+
+  nav {
+    top: 0px;
+    background-color: var(--web-color);
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0px;
+    height: 100vh;
+    display: none;
+  }
+
+  nav.hide {
+    display: none;
+  }
+
+  nav.show {
+    display: flex;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav h2 {
+    font-size: 3rem;
+    text-align: left;
+    width: 90%;
+    margin-left: 2rem;
+  }
+
+  nav ul li {
+    margin: 20px;
+    font-size: 2rem;
+  }
+}
