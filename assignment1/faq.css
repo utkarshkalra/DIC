@@ -1,0 +1,124 @@
+:root {
+  --web-color: rgb(32 83 100);
+  --web-color-light: rgb(81, 140, 159);
+  --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+body {
+  background-color: var(--web-color);
+}
+.faq {
+  background-color: var(--web-color);
+  height: 92vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.heading2 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/*Acco*/
+.ac-container {
+  width: 400px;
+  max-width: 80%;
+  border-radius: 10px !important;
+  overflow-x: hidden;
+}
+
+.ac-container label {
+  line-height: 21px;
+  font-size: 12px;
+  padding: 5px 20px;
+  position: relative;
+  z-index: 20;
+  height: 30px;
+  width: 100%;
+  display: block;
+  cursor: pointer;
+  color: #777;
+  background: #fff;
+}
+
+.ac-container {
+  width: 100%;
+  margin: 10px auto 30px auto;
+  text-align: left;
+}
+
+.ac-container label:hover {
+  background: #fff;
+}
+
+.ac-container input:checked + label,
+.ac-container input:checked + label:hover {
+  background: #f1f2f3;
+  color: #666;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 0 1px rgba(155, 155, 155, 0.3), 0 2px 2px rgba(0, 0, 0, 0.1);
+  height: 30px;
+  line-height: 21px;
+  font-size: 13px;
+}
+
+.ac-container label:hover:after,
+.ac-container input:checked + label:hover:after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  right: 13px;
+  top: 7px;
+}
+
+.ac-container input {
+  display: none;
+}
+
+.ac-container article {
+  background: var(--web-color-light);
+  margin-top: -1px;
+  overflow: hidden;
+  height: 0;
+  position: relative;
+  z-index: 10;
+  -webkit-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+  -moz-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+  -o-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+  -ms-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+  transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+}
+
+.ac-container article p {
+  font-style: normal;
+  color: #777;
+  line-height: 23px;
+  font-size: 10px;
+  padding: 20px;
+  color: white;
+  font-size: 12px;
+}
+
+.ac-container input:checked ~ article {
+  -webkit-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+  -moz-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+  -o-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+  -ms-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+  transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+  box-shadow: 0 0 0 1px rgba(155, 155, 155, 0.3);
+}
+
+.ac-container input:checked ~ article.ac-small {
+  height: 160px;
+}
+
+.ac-container input:checked ~ article.ac-medium {
+  height: 150px;
+}
+
+.ac-container input:checked ~ article.ac-large {
+  height: 150px;
+}

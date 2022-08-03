@@ -116,6 +116,12 @@ div.text {
   margin-bottom: 20px;
 }
 
+.required {
+  color: red;
+  font-size: 9px;
+  float: right;
+}
+
 .heading2 {
   font-size: 4rem;
   font-weight: 900;
@@ -271,6 +277,7 @@ th {
   margin-bottom: 6px;
   color: var(--web-color);
   font-size: small;
+  width: 100%;
 }
 .contact .right form div input {
   display: block;
@@ -290,6 +297,73 @@ th {
 
 .last-row a {
   color: var(--web-color);
+}
+
+/*---------- Our review ----------------- */
+
+.our-review {
+  color: var(--web-color);
+  position: relative;
+}
+
+.our-review .heading2 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#container {
+  padding: 20px;
+  display: flex;
+  overflow-x: scroll;
+  width: 100vw;
+}
+
+.shadow {
+  box-shadow: var(--shadow);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  width: 320px;
+  min-width: 80%;
+  margin: 0 10%;
+  border-radius: 10px;
+  height: 500px;
+  justify-content: center;
+  position: relative;
+}
+
+.shadow p {
+  text-align: center;
+}
+.photo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.photo img {
+  width: 45%;
+  border-radius: 50%;
+}
+.page {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+button.navigation {
+  position: absolute;
+  bottom: 30%;
+  border-radius: 50%;
+  padding: 10px 12px;
+}
+
+#next {
+  right: 10px;
+}
+
+#prev {
+  left: 10px;
 }
 
 /*--------- campus tour---------- */
