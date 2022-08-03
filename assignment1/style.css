@@ -17,6 +17,10 @@ body {
   height: 100%;
 }
 
+main {
+  overflow-x: hidden;
+}
+
 a {
   text-decoration: none;
 }
@@ -33,7 +37,6 @@ li {
 nav {
   top: 20px;
   position: fixed;
-  border-color: aqua;
   z-index: 100;
   color: white;
   display: flex;
@@ -66,7 +69,7 @@ button:hover {
 .changeBackground,
 .changeBackground * {
   top: 0;
-  background-color: var(--web-color);
+  background-color: var(--web-color) !important;
   color: white !important;
 }
 
