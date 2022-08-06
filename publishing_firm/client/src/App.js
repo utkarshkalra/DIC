@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import NavBar from "./Navbar/NavBar";
+import Footer from "./Footer/Footer";
+import HomePage from "./HomePage/HomePage";
+import Product from "./Products/Product";
+import Blog from "./Blog/Blog";
+import Gallery from "./Gallery/Gallery";
+import SingleBlog from "./Blog/SingleBlog/singleBlog";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <BrowserRouter>
+        <NavBar />
+
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="blogs" element={<Blog />} />
+          <Route path="blogs/:blogid" element={<SingleBlog />} />
+          <Route path="gallery" element={<Gallery />} />
+          <Route path="products" element={<Product />} />
+
+          <Route
+            path="*"
+            element={
+              <main style={{ padding: "1rem" }}>
+                <p>There's nothing here!</p>
+              </main>
+            }
+          />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </div>
   );
 }
